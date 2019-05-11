@@ -1,14 +1,17 @@
 import React from 'react';
 import './ListItem.css';
-import jadlonomiaImage from '../../../assets/images/jadlonomiaImage.jpg'
 
-const ListItem = () => (
+const ListItem = (props) => (
     <li className="listItem__wrapper">
-        <img src={jadlonomiaImage} className="listItem__image" />
+        <img
+            src={props.image}
+            className="listItem__image"
+            alt={props.name}
+        />
         <div>
-            <h2 className="listItem__name">Jadłonomia</h2>
-            <p className="listItem__description">Najbardziej znanany blog na temat kuchni roślinnej. Pyszne przepisy z kuchni z całego świata. Inspirujące zdjęcia z podróży.</p>
-            <button className="listItem__button">visit instagram</button>
+            <h2 className="listItem__name">{props.name}</h2>
+            <p className="listItem__description">{props.description}</p>
+            <a href={props.link} className="listItem__button">visit instagram</a>
         </div>
     </li>
 );

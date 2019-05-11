@@ -8,24 +8,24 @@ export const instagramAccounts = [
         image: jadlonomiaImage,
         name: 'Jadłonomia',
         description: 'Podróże i najpyszniejsze w sieci wegańskie jedzenie.',
-        twitterLink: 'https://www.instagram.com/jadlonomia/',
+        instagramLink: 'https://www.instagram.com/jadlonomia/',
     },
     {
         image: weganonImage,
         name: 'Weganon',
         description: 'Wegańskie gotowanie po męsku. Dużo przepisów na pyszne i zdrowe słodkości.',
-        twitterLink: 'https://www.instagram.com/weganon/',
+        instagramLink: 'https://www.instagram.com/weganon/',
     },
     {
         image: minimalistImage,
         name: 'Minimalist Baker',
         description: 'Wegański food porn. Mało składników, szybkie, piękne i pyszne dania.',
-        twitterLink: 'https://www.instagram.com/minimalistbaker/',
+        instagramLink: 'https://www.instagram.com/minimalistbaker/',
     },
     {
         image: wegannerdImage,
         name: 'Wegan Nerd',
         description: 'Dużo inspiracji na wegańskie przepisy. Fajne pomysły na dania kuchni azjatyckiej.',
-        twitterLink: 'https://www.instagram.com/wegannerdblog/',
+        instagramLink: 'https://www.instagram.com/wegannerdblog/',
     },
 ]
