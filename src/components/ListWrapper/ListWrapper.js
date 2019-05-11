@@ -14,10 +14,8 @@ const ListWrapper = () => (
 
         {instagramAccounts.map(item => (
             <ListItem
-                name={item.name}
-                description={item.description}
-                image={item.image}
-                link={item.instagramLink}
+                key={item.name}
+                {...item}
             />
         ))}
     </ul>
