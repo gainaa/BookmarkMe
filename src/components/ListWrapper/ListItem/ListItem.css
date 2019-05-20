@@ -15,7 +15,7 @@
 
 .listItem__name {
     margin: 0;
-    color: #1E58FF;
+    color: #2ca59b;
     font-weight: 700;
 }
 
@@ -30,6 +30,6 @@
     font-size: 12px;
     text-decoration: none;
     background: none;
-    border: 2px solid #1E58FF;
-    color: #1E58FF;
+    border: 2px solid  #2ca59b;
+    color: #2ca59b;
 }
