@@ -16,7 +16,7 @@ const ListItem = ({
             <div>
                 <h2 className="listItem__name">{name}</h2>
                 <p className="listItem__description">{description}</p>
-                <a href={instagramLink} className="listItem__button">visit instagram</a>
+                <a href={instagramLink} target="_blank" className="listItem__button">visit instagram</a>
             </div>
         </li>
     );

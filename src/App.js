@@ -1,7 +1,7 @@
 import React from 'react';
 import ListWrapper from './components/ListWrapper/ListWrapper';
 import './index.css';
-import { RaceOperator } from 'rxjs/internal/observable/race';
+import Form from './components/Form/Form';
 
 const myData = [
     {
@@ -36,11 +36,31 @@ class App extends React.Component {
         items: [...myData],
     }
 
+    addItem = (e) => {
+        e.preventDefault();
+
+        const newItem = {
+            name: e.target[0].value,
+            instagramLink: e.target[1].value,
+            image: e.target[2].value,
+            description: e.target[3].value,
+        }
+
+        this.setState(prevState => ({
+            items:[...prevState.items, newItem],
+        }));
+
+        e.target.reset();
+    }
+
     render() {
         return (
             <div>
                 <ListWrapper
                     items={this.state.items}
+                />
+                <Form
+                    submitFn={this.addItem}
                 />
             </div>
         )
