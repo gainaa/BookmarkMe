@@ -5,6 +5,7 @@ const Form = ({ submitFn }) => (
     <div className={styles.wrapper}>
         <h2>Add new instagram account</h2>
         <form
+            autoComplete="off"
             className={styles.form}
             onSubmit={submitFn}
         >
