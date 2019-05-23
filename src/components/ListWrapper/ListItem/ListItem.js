@@ -1,5 +1,5 @@
 import React from 'react';
-import './ListItem.css';
+import styles from "./ListItem.module.scss";
 
 const ListItem = ({
     name,
@@ -7,16 +7,23 @@ const ListItem = ({
     image,
     instagramLink
 }) => (
-        <li className="listItem__wrapper">
+        <li className={styles.wrapper}>
             <img
                 src={image}
-                className="listItem__image"
+                className={styles.image}
                 alt={name}
             />
             <div>
-                <h2 className="listItem__name">{name}</h2>
-                <p className="listItem__description">{description}</p>
-                <a href={instagramLink} target="_blank" className="listItem__button">visit instagram</a>
+                <h2 className={styles.name}>{name}</h2>
+                <p className={styles.description}>{description}</p>
+                <a
+                    href={instagramLink}
+                    target="_blank"
+                    className={styles.button}
+                    rel="noopener noreferrer"
+                >
+                    visit instagram
+                </a>
             </div>
         </li>
     );
