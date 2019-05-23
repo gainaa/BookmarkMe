@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import styles from "./ListItem.module.scss";
+import Button from "../../Button/Button";
 
 const ListItem = ({ image, name, description, instagramLink }) => {
     const ImageTag = image ? "img" : "div";
@@ -15,16 +16,9 @@ const ListItem = ({ image, name, description, instagramLink }) => {
             <div>
                 <h2 className={styles.name}>{name}</h2>
                 <p className={styles.description}>{description}</p>
-                <a
-                    href={instagramLink}
-                    target="_blank"
-                    className={styles.button}
-                    rel="noopener noreferrer"
-                >
-                    visit instagram
-          </a>
+                <Button href={instagramLink}>visit instagram</Button>
             </div>
-        </li>
+        </li >
     );
 };
 
