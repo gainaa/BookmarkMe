@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Form.module.scss';
+import Input from './../Input/Input';
 
 const Form = ({ submitFn }) => (
     <div className={styles.wrapper}>
@@ -9,54 +10,24 @@ const Form = ({ submitFn }) => (
             className={styles.form}
             onSubmit={submitFn}
         >
-            <div className={styles.formItem}>
-                <input
-                    className={styles.input}
-                    type="text"
-                    name="name"
-                    required
-                    id="name" placeholder=" " maxLength="30"
-                />
-                <label className={styles.label} htmlFor="name">Name</label>
-                <div className={styles.formItemBar}></div>
-            </div>
-            <div className={styles.formItem}>
-                <input
-                    className={styles.input}
-                    type="text"
-                    name="link"
-                    required
-                    id="link" placeholder=" "
-                />
-                <label className={styles.label} htmlFor="link">Link</label>
-                <div className={styles.formItemBar}></div>
-            </div>
-            <div className={styles.formItem}>
-                <input
-                    className={styles.input}
-                    type="text"
-                    name="image"
-                    id="image"
-                    placeholder=" "
-                />
-                <label className={styles.label} htmlFor="image">
-                    Image
-        </label>
-                <div className={styles.formItemBar} />
-            </div>
-            <div className={styles.formItem}>
-                <textarea
-                    className={styles.textarea}
-                    name="description"
-                    id="description"
-                    required
-                    placeholder=" "
-                />
-                <label className={styles.label} htmlFor="description">
-                    Description
-        </label>
-                <div className={styles.formItemBar} />
-            </div>
+            <Input
+                name="name"
+                label="Name"
+                maxLength={30}
+            />
+            <Input
+                name="link"
+                label="Instagram link"
+            />
+            <Input
+                name="image"
+                label="Image"
+            />
+            <Input
+                tag="textarea"
+                name="description"
+                label="Description"
+            />
             <button className={styles.button}>add new item</button>
         </form>
     </div>
