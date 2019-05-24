@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import InstagramView from '../InstagramView/InstagramView';
 import ArticlesView from '../ArticlesView/ArticlesView';
 import NotesView from '../NotesView/NotesView';
-import Navigation from '../../components/Navigation/Navigation';
+import Header from '../../components/Header/Header';
 
 
 const myData = [
@@ -61,7 +61,7 @@ class Root extends React.Component {
         return (
             <BrowserRouter>
                 <>
-                    <Navigation />
+                    <Header />
                     <h1>hello world</h1>
                     <Switch>
                         <Route exact path="/" component={InstagramView} />

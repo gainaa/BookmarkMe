@@ -1,9 +1,12 @@
+
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .navItem {
+  margin-left: 80px;
+  padding: 0;
+}
+
+.navItem {
+    display: inline-block;
+    margin-right: 50px;
     list-style: none;
     
     &Link {
