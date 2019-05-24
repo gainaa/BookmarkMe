@@ -1,7 +1,10 @@
 import React from 'react';
-import ListWrapper from './components/ListWrapper/ListWrapper';
 import './index.css';
-import Form from './components/Form/Form';
+import { BrowserRouter, Route } from 'react-router-dom';
+import InstagramView from '../InstagramView/InstagramView';
+import ArticlesView from '../ArticlesView/ArticlesView';
+import NotesView from '../NotesView/NotesView';
+
 
 const myData = [
     {
@@ -30,7 +33,7 @@ const myData = [
     },
 ]
 
-class App extends React.Component {
+class Root extends React.Component {
 
     state = {
         items: [...myData],
@@ -47,7 +50,7 @@ class App extends React.Component {
         }
 
         this.setState(prevState => ({
-            items:[...prevState.items, newItem],
+            items: [...prevState.items, newItem],
         }));
 
         e.target.reset();
@@ -55,17 +58,17 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
-                <ListWrapper
-                    items={this.state.items}
-                />
-                <Form
-                    submitFn={this.addItem}
-                />
-            </div>
-        )
+            <BrowserRouter>
+                <>
+                    <h1>hello world</h1>
+                    <Route exact path="/" component={InstagramView} />
+                    <Route path="/articles" component={ArticlesView} />
+                    <Route path="/notes" component={NotesView} />
+                </>
+            </BrowserRouter>
+        );
     }
 
 };
 
-export default App;
+export default Root;

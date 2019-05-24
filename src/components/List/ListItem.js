@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import styles from "./ListItem.module.scss";
-import Button from "../../Button/Button";
-import Title from "../../Title/Title";
+import Button from "../Button/Button";
+import Title from "../Title/Title";
 
 const ListItem = ({ image, name, description, instagramLink }) => {
     const ImageTag = image ? "img" : "div";
