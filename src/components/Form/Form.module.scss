@@ -1,13 +1,8 @@
 .wrapper {
-    width: 50%;
-    margin: 50px auto 100px;;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-    h2 {
-        color:  #2ca59b;
-    }
+    align-items: flex-start;
 }
 
 .form {
@@ -17,6 +12,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    button {
+        margin-top: 50px;
+    }
   }
   
   
