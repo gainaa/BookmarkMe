@@ -1,7 +1,12 @@
 import React from 'react';
+import AppContext from '../../contex';
 
 const ArticlesView = () => (
-    <p>This is an Articles View</p>
+    <AppContext.Consumer>
+        {(context) => (
+            <p>To jest przekazany context: {context}</p>
+        )}
+    </AppContext.Consumer>
 );
 
 export default ArticlesView;
