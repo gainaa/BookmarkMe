@@ -1,5 +1,5 @@
 import React from 'react';
-import AppContext from "../../contex";
+import AppContext from "../../context";
 import styles from './Form.module.scss';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
@@ -19,7 +19,6 @@ const descriptions = {
 }
 
 class Form extends React.Component {
-
     state = {
         type: types.instagram,
         title: "",
@@ -38,7 +37,6 @@ class Form extends React.Component {
         this.setState({
             [e.target.name]: e.target.value,
         });
-
     };
 
     render() {

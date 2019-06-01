@@ -1,10 +1,11 @@
 import React from 'react';
-import AppContext from '../../contex';
+import AppContext from '../../context';
+import List from '../../components/List/List';
 
 const ArticlesView = () => (
     <AppContext.Consumer>
         {(context) => (
-            <p>To jest przekazany context: {context}</p>
+            <List items={context.article} />
         )}
     </AppContext.Consumer>
 );

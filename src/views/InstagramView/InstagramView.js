@@ -1,7 +1,14 @@
 import React from 'react';
+import AppContext from '../../context';
+import List from '../../components/List/List';
+
 
 const InstagramView = () => (
-    <p>This is an Instagram View</p>
+    <AppContext.Consumer>
+        {(context) => (
+            <List items={context.instagram} />
+        )}
+    </AppContext.Consumer>
 );
 
 export default InstagramView;

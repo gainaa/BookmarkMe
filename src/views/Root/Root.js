@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import AppContext from '../../contex';
+import AppContext from '../../context';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import InstagramView from '../InstagramView/InstagramView';
 import ArticlesView from '../ArticlesView/ArticlesView';
@@ -9,7 +9,6 @@ import Header from '../../components/Header/Header';
 import Modal from '../../components/Modal/Modal';
 
 class Root extends React.Component {
-
     state = {
         instagram: [],
         article: [],
@@ -44,13 +43,12 @@ class Root extends React.Component {
         const contextElements = {
             ...this.state,
             addItem: this.addItem
-        };
+        }
 
         return (
             <BrowserRouter>
                 <AppContext.Provider value={contextElements}>
                     <Header openModalFn={this.openModal} />
-                    <h1>hello world</h1>
                     <Switch>
                         <Route exact path="/" component={InstagramView} />
                         <Route path="/articles" component={ArticlesView} />

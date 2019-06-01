@@ -4,36 +4,40 @@ import styles from "./ListItem.module.scss";
 import Button from "../Button/Button";
 import Title from "../Title/Title";
 
-const ListItem = ({ image, name, description, instagramLink }) => {
+const ListItem = ({ image, title, description, link }) => {
     const ImageTag = image ? "img" : "div";
 
     return (
         <li className={styles.wrapper}>
-            <ImageTag
+            {image && <ImageTag
                 src={image}
                 className={image ? styles.image : styles.imageNone}
-                alt={name}
-            />
+                alt={title}
+            />}
             <div>
-                <Title>{name}</Title>
+                <Title>{title}</Title>
                 <p className={styles.description}>{description}</p>
-                <Button href={instagramLink}>visit instagram</Button>
+                {link && <Button
+                    href={link}
+                >
+                    visit page
+        </Button>}
             </div>
-        </li >
+        </li>
     );
 };
 
 
 ListItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    link: PropTypes.string,
     image: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string,
-    instagramLink: PropTypes.string.isRequired,
 };
 
 ListItem.defaultProps = {
     image: null,
-    description: "Taki opis pojawia się, gdy zapominasz napisać coś od siebie.",
+    link: null,
 };
 
 export default ListItem;
