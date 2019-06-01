@@ -11,31 +11,21 @@ import Modal from '../../components/Modal/Modal';
 class Root extends React.Component {
 
     state = {
-        items: {
-            instagrams: [],
-            articles: [],
-            notes: [],
-        },
+        instagram: [],
+        article: [],
+        note: [],
         isModalOpen: false,
     };
 
-    addItem = (e) => {
+    addItem = (e, newItem) => {
         e.preventDefault();
-        console.log('Działa');
 
-        // const newItem = {
-        //     // name: e.target[0].value,
-        //     // instagramLink: e.target[1].value,
-        //     // image: e.target[2].value,
-        //     // description: e.target[3].value,
-        // }
+        this.setState(prevState => ({
+            [newItem.type]: [...prevState[newItem.type], newItem],
+        }));
 
-        // this.setState(prevState => ({
-        //     items: [...prevState.items, newItem],
-        // }));
-
-        // e.target.reset();
-    }
+        this.closeModal();
+    };
 
     openModal = () => {
         this.setState({
