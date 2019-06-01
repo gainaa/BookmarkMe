@@ -2,7 +2,7 @@
 ## General info:
 BookmarkMe is a simple application for memorizing the addresses of your favorite Instagram accounts and articles. With the app, you'll also add your own notes.
 ## Demo:
-[BookmarkMe](https://fervent-bose-cc0812.netlify.com/){:target="_blank"}
+[BookmarkMe](https://fervent-bose-cc0812.netlify.com/){:target="_blank" rel="noopener"}
 ## Technologies:
 Project is created with:
  * React: 16.6.3,
