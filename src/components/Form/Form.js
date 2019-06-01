@@ -81,21 +81,32 @@ class Form extends React.Component {
                         </Radio>
                             </div>
                             <Input
-                                name="name"
+                                onChange={this.handleInputChange}
+                                value={this.state.title}
+                                name="title"
                                 label={type === types.instagram ? "Instagram Name" : "Title"}
                                 maxLength={30}
                             />
                             {type !== types.note ? (
                                 <Input
+                                    onChange={this.handleInputChange}
+                                    value={this.state.link}
                                     name="link"
                                     label={type === types.instagram ? "Instagram Link" : "Link"}
                                 />
                             ) : null}
 
                             {type === types.instagram ? (
-                                <Input name="image" label="Image" />
+                                <Input
+                                    onChange={this.handleInputChange}
+                                    value={this.state.image}
+                                    name="image"
+                                    label="Image"
+                                />
                             ) : null}
                             <Input
+                                onChange={this.handleInputChange}
+                                value={this.state.description}
                                 tag="textarea"
                                 name="description"
                                 label="Description"
